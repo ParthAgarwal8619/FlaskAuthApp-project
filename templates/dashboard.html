@@ -1,6 +1,8 @@
 {% extends 'base.html' %}
 {% block body %}
 <div class="container">
-    <h1 class="text-center">Welcome to the dashboard</h1>
-    
+    <h1>Welcome to Dashboard</h1>
+    <p>You are logged in as {{ session['user'] }}</p>
+    <a href="{{ url_for('logout') }}" class="btn btn-danger">Logout</a>
+</div>
 {% endblock body %}

@@ -1,19 +1,36 @@
 {% extends 'base.html' %}
 {% block body %}
 <div class="container">
-    <h1 class="text-center">Register new user</h1>
-    <form action="">
+    <h1 class="text-center">Login</h1>
+
+    <form method="POST" action="{{ url_for('login') }}">
         
         <div class="mb-3">
             <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="email" />
+            <input 
+                type="email" 
+                class="form-control" 
+                id="email" 
+                name="email" 
+                required
+            />
         </div>
+
         <div class="mb-3">
             <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" name="password" />
+            <input 
+                type="password" 
+                class="form-control" 
+                id="password" 
+                name="password" 
+                required
+            />
         </div>
+
         <div class="mb-3">
-            <button type="submit" class="btn btn-primary">Login</button>
+            <button type="submit" class="btn btn-primary">
+                Login
+            </button>
         </div>
 
     </form>
